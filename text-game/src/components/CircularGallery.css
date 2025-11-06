@@ -1,0 +1,332 @@
+.circular-gallery {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  cursor: grab;
+  position: relative;
+  perspective: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  user-select: none;
+}
+
+.circular-gallery:active {
+  cursor: grabbing;
+}
+
+.gallery-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  margin-bottom: 2rem;
+}
+
+.drag-hint {
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #D4AF37;
+  font-size: 1rem;
+  font-family: 'Times New Roman', 'KaiTi', '楷體', serif;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  z-index: 10;
+  animation: fadeInOut 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(40, 30, 20, 0.9), rgba(30, 20, 10, 0.9));
+  border: 3px solid #8B6914;
+  border-radius: 50%;
+  color: #D4AF37;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-button:hover {
+  background: linear-gradient(135deg, rgba(139, 105, 20, 0.9), rgba(212, 175, 55, 0.9));
+  border-color: #D4AF37;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 
+    0 8px 25px rgba(212, 175, 55, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  color: #FFF;
+}
+
+.arrow-button:active {
+  transform: translateY(-50%) scale(0.95);
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.5),
+    inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.arrow-left {
+  left: 10%;
+}
+
+.arrow-right {
+  right: 10%;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.gallery-item {
+  position: absolute;
+  width: 250px;
+  height: 350px;
+  transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  border: 4px solid transparent;
+  outline: none;
+  will-change: transform, opacity;
+  pointer-events: auto;
+}
+
+.gallery-item.selected {
+  border-color: #D4AF37;
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.8);
+}
+
+.gallery-item:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.item-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: inherit;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: #000;
+}
+
+.item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .item-image {
+  transform: scale(1.05);
+}
+
+.item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  padding: 2rem 1.5rem;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .item-overlay {
+  transform: translateY(0);
+}
+
+.item-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  font-family: 'Times New Roman', 'SimSun', '宋體', serif;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.item-subtitle {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.9;
+  font-family: 'Times New Roman', 'KaiTi', '楷體', serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.selected-info {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(40, 30, 20, 0.95), rgba(30, 20, 10, 0.95));
+  border: 2px solid #8B6914;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.5s ease;
+  margin-top: 1rem;
+  z-index: 100;
+}
+
+.selected-name {
+  font-size: 2rem;
+  color: #D4AF37;
+  margin: 0 0 0.5rem 0;
+  font-family: 'Times New Roman', 'SimSun', '宋體', serif;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.selected-title {
+  font-size: 1.3rem;
+  color: #C9A961;
+  margin: 0 0 1.5rem 0;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.selected-description {
+  font-size: 1rem;
+  color: #D4C5A0;
+  line-height: 1.8;
+  margin: 0 0 2rem 0;
+  font-family: 'Times New Roman', 'KaiTi', '楷體', serif;
+  text-align: justify;
+}
+
+.select-button {
+  background: linear-gradient(135deg, #8B6914 0%, #D4AF37 50%, #8B6914 100%);
+  color: #1a1410;
+  border: 2px solid #D4AF37;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(139, 105, 20, 0.4);
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  font-family: 'Times New Roman', 'KaiTi', '楷體', serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.select-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.select-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.select-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(139, 105, 20, 0.6);
+  background: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #D4AF37 100%);
+  color: #000;
+}
+
+.select-hint {
+  margin-top: 1rem;
+  color: #A89968;
+  font-size: 0.9rem;
+  font-family: 'Times New Roman', 'KaiTi', '楷體', serif;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 180px;
+    height: 260px;
+  }
+
+  .selected-info {
+    width: 95%;
+    padding: 1.5rem;
+    bottom: 1rem;
+  }
+
+  .selected-name {
+    font-size: 1.5rem;
+  }
+
+  .selected-title {
+    font-size: 1rem;
+  }
+
+  .selected-description {
+    font-size: 0.85rem;
+    max-height: 80px;
+    overflow-y: auto;
+  }
+
+  .select-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  .arrow-button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .arrow-left {
+    left: 5%;
+  }
+
+  .arrow-right {
+    right: 5%;
+  }
+
+  .drag-hint {
+    font-size: 0.9rem;
+    top: -2rem;
+  }
+}
+

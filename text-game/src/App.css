@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, 'Microsoft JhengHei', '微軟正黑體', 'Noto Sans TC', 'Noto Sans SC';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* 全局滾動條樣式 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(233, 69, 96, 0.6);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(233, 69, 96, 0.8);
+}
+
+/* 選取文字時的顏色 */
+::selection {
+  background: rgba(233, 69, 96, 0.3);
+  color: white;
+}
+
+/* 確保中文字體正確顯示 */
+@font-face {
+  font-family: 'Chinese';
+  src: local('Microsoft JhengHei'), local('微軟正黑體'), local('Noto Sans TC');
+}
+
+/* 背景音樂控制按鈕 */
+.bgm-control-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, rgba(40, 30, 20, 0.9), rgba(30, 20, 10, 0.9));
+  border: 2px solid #8B6914;
+  border-radius: 50%;
+  color: #D4AF37;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 4px 15px rgba(139, 105, 20, 0.4),
+    inset 0 1px 0 rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Times New Roman', 'KaiTi', '楷體', serif;
+}
+
+.bgm-control-button:hover {
+  background: linear-gradient(135deg, rgba(139, 105, 20, 0.8), rgba(212, 175, 55, 0.6));
+  border-color: #D4AF37;
+  color: #FFD700;
+  transform: scale(1.1);
+  box-shadow: 
+    0 6px 20px rgba(139, 105, 20, 0.6),
+    0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.bgm-control-button:active {
+  transform: scale(0.95);
+}
+
+.bgm-control-button:focus {
+  outline: none;
+  box-shadow: 
+    0 4px 15px rgba(139, 105, 20, 0.4),
+    0 0 0 3px rgba(212, 175, 55, 0.3);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .bgm-control-button {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}

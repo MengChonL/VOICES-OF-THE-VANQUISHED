@@ -1,0 +1,566 @@
+.start-screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.start-content {
+  text-align: center;
+  max-width: 800px;
+  animation: fadeIn 1.5s ease-in;
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(135deg, rgba(40, 30, 20, 0.95), rgba(30, 20, 10, 0.95));
+  backdrop-filter: blur(10px);
+  padding: 4rem 3rem;
+  border-radius: 10px;
+  border: 3px solid #8B6914;
+  box-shadow: 
+    0 0 50px rgba(139, 105, 20, 0.3),
+    inset 0 0 100px rgba(0, 0, 0, 0.5),
+    0 20px 60px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+/* 頂部裝飾 */
+.title-decoration-top {
+  width: 200px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  margin: 0 auto 2rem auto;
+  position: relative;
+}
+
+.title-decoration-top::before,
+.title-decoration-top::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #D4AF37;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title-decoration-top::before {
+  left: 0;
+}
+
+.title-decoration-top::after {
+  right: 0;
+}
+
+/* 底部裝飾 */
+.title-decoration-bottom {
+  width: 200px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  margin: 2rem auto 0 auto;
+  position: relative;
+}
+
+.title-decoration-bottom::before,
+.title-decoration-bottom::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #D4AF37;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title-decoration-bottom::before {
+  left: 0;
+}
+
+.title-decoration-bottom::after {
+  right: 0;
+}
+
+.game-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #D4AF37;
+  margin-bottom: 1rem;
+  font-family: 'Times New Roman', 'SimSun', '宋體', serif;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(212, 175, 55, 0.4);
+  letter-spacing: 0.1em;
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+.game-subtitle {
+  font-size: 1.5rem;
+  color: #C9A961;
+  margin-bottom: 2rem;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+  opacity: 0.9;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* 標題下方分隔線 */
+.title-divider {
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    #8B6914 20%, 
+    #D4AF37 50%, 
+    #8B6914 80%, 
+    transparent
+  );
+  margin: 2rem auto;
+  position: relative;
+}
+
+.title-divider::before {
+  content: '◆';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #D4AF37;
+  font-size: 1.2rem;
+  background: rgba(30, 20, 10, 0.95);
+  padding: 0 1rem;
+}
+
+.game-description {
+  font-size: 1.2rem;
+  color: #D4C5A0;
+  margin: 2rem auto;
+  max-width: 600px;
+  line-height: 2;
+  font-family: 'Times New Roman', 'KaiTi', '楷體', serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.game-period {
+  font-size: 1.8rem;
+  color: #D4AF37;
+  margin: 1.5rem 0;
+  font-weight: bold;
+  letter-spacing: 0.5em;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* 裝飾分隔線 */
+.ornament-divider {
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #8B6914, transparent);
+  margin: 2rem auto;
+  position: relative;
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: '❖';
+  position: absolute;
+  color: #8B6914;
+  font-size: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(30, 20, 10, 0.95);
+  padding: 0 0.5rem;
+}
+
+.ornament-divider::before {
+  left: 10%;
+}
+
+.ornament-divider::after {
+  right: 10%;
+}
+
+.start-button {
+  background: linear-gradient(135deg, #8B6914 0%, #D4AF37 50%, #8B6914 100%);
+  color: #1a1410;
+  border: 2px solid #D4AF37;
+  padding: 1.2rem 4rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 
+    0 8px 20px rgba(139, 105, 20, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  font-family: 'Times New Roman', 'KaiTi', '楷體', serif;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.start-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.start-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.start-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 15px 30px rgba(139, 105, 20, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #D4AF37 100%);
+  color: #000;
+}
+
+.start-button:active {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 5px 15px rgba(139, 105, 20, 0.4),
+    inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-info {
+  margin-top: 3rem;
+  color: #A89968;
+  font-size: 1rem;
+  line-height: 2;
+  font-family: 'Times New Roman', 'KaiTi', '楷體', serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.game-info p {
+  margin: 0.8rem 0;
+  letter-spacing: 0.05em;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titleGlow {
+  from {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.8),
+      0 0 20px rgba(212, 175, 55, 0.4);
+  }
+  to {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.8),
+      0 0 30px rgba(212, 175, 55, 0.6),
+      0 0 40px rgba(212, 175, 55, 0.4);
+  }
+}
+
+/* 四角裝飾 */
+.start-content::before,
+.start-content::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #D4AF37;
+}
+
+.start-content::before {
+  top: 15px;
+  left: 15px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.start-content::after {
+  top: 15px;
+  right: 15px;
+  border-left: none;
+  border-bottom: none;
+}
+
+/* 添加底部角落裝飾 */
+.start-content {
+  position: relative;
+}
+
+.start-content .game-info::before,
+.start-content .game-info::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #D4AF37;
+}
+
+.start-content .game-info::before {
+  bottom: 15px;
+  left: 15px;
+  border-right: none;
+  border-top: none;
+}
+
+.start-content .game-info::after {
+  bottom: 15px;
+  right: 15px;
+  border-left: none;
+  border-top: none;
+}
+
+/* 設計理念按鈕 */
+.philosophy-button {
+  background: linear-gradient(135deg, #6B5414 0%, #9C8647 50%, #6B5414 100%);
+  color: #D4C5A0;
+  border: 2px solid #9C8647;
+  padding: 1.2rem 4rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 
+    0 5px 15px rgba(107, 84, 20, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  font-family: 'Times New Roman', 'KaiTi', '楷體', serif;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  text-transform: none;
+}
+
+.philosophy-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.philosophy-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.philosophy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 25px rgba(107, 84, 20, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, #9C8647 0%, #C9A961 50%, #9C8647 100%);
+  color: #1a1410;
+}
+
+.philosophy-button:active {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 3px 10px rgba(107, 84, 20, 0.4),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 設計理念內容區域 */
+.philosophy-content {
+  text-align: left;
+  max-width: 900px;
+  animation: fadeIn 1.5s ease-in;
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(135deg, rgba(40, 30, 20, 0.95), rgba(30, 20, 10, 0.95));
+  backdrop-filter: blur(10px);
+  padding: 3rem 3rem 2rem 3rem;
+  border-radius: 10px;
+  border: 3px solid #8B6914;
+  box-shadow: 
+    0 0 50px rgba(139, 105, 20, 0.3),
+    inset 0 0 100px rgba(0, 0, 0, 0.5),
+    0 20px 60px rgba(0, 0, 0, 0.8);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.philosophy-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.philosophy-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #D4AF37;
+  margin-bottom: 1.5rem;
+  font-family: 'Times New Roman', 'SimSun', '宋體', serif;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(212, 175, 55, 0.4);
+  letter-spacing: 0.1em;
+}
+
+.philosophy-text {
+  color: #D4C5A0;
+  font-size: 1.1rem;
+  line-height: 2;
+  font-family: 'Times New Roman', 'KaiTi', '楷體', serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.philosophy-paragraph {
+  margin-bottom: 1.8rem;
+  text-indent: 2em;
+  text-align: justify;
+}
+
+.philosophy-paragraph:first-child {
+  margin-top: 0;
+}
+
+.back-button {
+  background: linear-gradient(135deg, #6B5414 0%, #9C8647 50%, #6B5414 100%);
+  color: #D4C5A0;
+  border: 2px solid #9C8647;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 
+    0 5px 15px rgba(107, 84, 20, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  font-family: 'Times New Roman', 'KaiTi', '楷體', serif;
+  margin-top: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 25px rgba(107, 84, 20, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, #9C8647 0%, #C9A961 50%, #9C8647 100%);
+  color: #1a1410;
+}
+
+.back-button:active {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 3px 10px rgba(107, 84, 20, 0.4),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 滾動條樣式 */
+.philosophy-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.philosophy-content::-webkit-scrollbar-track {
+  background: rgba(40, 30, 20, 0.5);
+  border-radius: 5px;
+}
+
+.philosophy-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #8B6914, #D4AF37);
+  border-radius: 5px;
+  border: 2px solid rgba(40, 30, 20, 0.5);
+}
+
+.philosophy-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #D4AF37, #FFD700);
+}
+
+@media (max-width: 768px) {
+  .game-title {
+    font-size: 2.5rem;
+  }
+  
+  .game-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .game-description {
+    font-size: 1.1rem;
+  }
+  
+  .start-button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    letter-spacing: 0.2em;
+    max-width: 90%;
+  }
+
+  .philosophy-button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    letter-spacing: 0.15em;
+    max-width: 90%;
+    margin: 1rem auto 0 auto;
+  }
+
+  .start-content {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .start-content::before,
+  .start-content::after,
+  .start-content .game-info::before,
+  .start-content .game-info::after {
+    width: 25px;
+    height: 25px;
+  }
+
+  .philosophy-content {
+    padding: 2rem 1.5rem;
+    max-height: 85vh;
+  }
+
+  .philosophy-title {
+    font-size: 1.8rem;
+  }
+
+  .philosophy-text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .philosophy-paragraph {
+    text-indent: 1.5em;
+  }
+}
