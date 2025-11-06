@@ -1,0 +1,17 @@
+# 草稿文件
+Apa
+line1draft
+line2draft
+line3draft
+line4draft
+linesetting.md
+
+# 系统文件
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Node modules (已经在 text-game/.gitignore 中)
+node_modules/
+
