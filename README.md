@@ -50,6 +50,13 @@
 3. 如果系統詢問，選擇「是」以允許程序運行
 
 **完成！** 腳本會自動處理一切，然後在瀏覽器打開遊戲。
+or
+安裝 Git（僅當你想用 git clone）
+從 https://git-scm.com/download/win 安裝
+然後執行：
+bash
+git clone https://github.com/MengChonL/VOICES-OF-THE-VANQUISHED.git
+進入資料夾執行 setup.bat
 
 ---
 
