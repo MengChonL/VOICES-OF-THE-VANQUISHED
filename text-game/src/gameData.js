@@ -342,7 +342,7 @@ export const storyData = {
           {
             location: '索圖塔（Sotuta）城邦的領主大廳 - Cocom 家族的領地',
             dialogue: [
-              { speaker: "B'alam", text: '三天後，我抵達了索圖塔。這裡是Cocom家族的地盤。「舊霸主」。他們的心和他們的蜂蜜酒一樣苦。他們不關心Kukulkan，他們只關心復仇和他們古老的Kukulkan。', type: 'thought' },
+              { speaker: "B'alam", text: '三天後，我抵達了索圖塔。這裡是Cocom家族的地盤。「舊霸主」。他們的心和他們的蜂蜜酒一樣苦。他們只關心復仇和他們古老的Kukulkan。', type: 'thought' },
               { speaker: 'Cocom 領主', text: "你身上有馬尼(Maní）的臭味，B'alam。你是不是又去親吻Xiu家族的腳了？", emotion: '粗魯地' },
               { speaker: "B'alam", text: '大人，這只是生意。我必須餵飽我的腳夫。但我的心，永遠和『真正』的古神在一起。', action: '立刻壓低聲音，表情變得沉痛' },
               { speaker: "B'alam", text: '這是我在路上特意為您保留的。我經過您祖父的聖地時，曾向Kukulkan唯一的繼承人祈求，祈求它們早日懲罰那些背信棄義的Xiu叛徒。', action: '從袋中取出一小瓶蜜酒' },
