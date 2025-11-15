@@ -132,8 +132,13 @@ export const storyData = {
           { speaker: '波波卡', text: '我不想死。我不知道為什麼，但我不想死。', type: 'thought' },
           { speaker: '旁白', text: '他們把我拖走，和其他倖存者一起關進奴隸營。日復一日，我在碎石與灰燼中勞作，重建這座被他們稱為『墨西哥城』的廢墟。' },
           { speaker: '波波卡', text: '一年過去了。他們在我們神廟的遺址上，蓋起了一座冰冷的石頭教堂。', type: 'thought' },
-          { speaker: '波波卡', text: '一個穿著棕色長袍、沒有武器的西班牙人（方濟會修士）來到了奴隸營......'},
-          { speaker: '旁白', text: '他用着生硬的納瓦特爾語對我說：你的技藝很有用，為了上帝(Dios)你的靈魂即將得救'},
+          { speaker: '旁白', text: '一個穿著棕色長袍、沒有武器的西班牙人（方濟會修士）走進了營地。他不像其他人那樣佩劍或攜帶鞭子。他在觀察我們，像是在尋找什麼。' },
+          { speaker: '旁白', text: '他停在了我面前。我正在用一塊碎石，無意識地在泥地上劃出一隻格查爾鳥的輪廓。這是我僅存的習慣。' },
+          { speaker: '修士', text: '...你。你的手。', emotion: '生硬的納瓦特爾語' },
+          { speaker: '旁白', text: '他蹲下來，看著那隻鳥的圖案。他的手指觸碰了我的手腕——那雙曾為皇帝服務、如今佈滿瘡疤和污垢的手。' },
+          { speaker: '修士', text: '你造過神像？' },
+          { speaker: '波波卡', text: '...', action: '我點了點頭。' },
+          { speaker: '修士', text: '很好。你的手藝不屬於魔鬼。它屬於 Dios（上帝）。你將為一個新的神服務。一個真正的神。', action: '他拉起了我。' },
           { speaker: '旁白', text: '我活了下來。我現在坐在一個冰冷的石頭房間裡。這是一座新蓋的『教堂』。我的手，那雙曾為阿茲特克皇帝服務的手，正在製作一件新的披風。不是為戰神，而是為他們釘在木架上的那個『神之子』的母親（聖母瑪利亞）。他們稱讚我的技藝，說這是『上帝的禮物』。我只是點頭。' },
           { speaker: '波波卡', text: '我的技藝還在，但我的靈魂已經死了。我的驕傲、我的家人、我的神，都和特諾奇提特蘭一起被埋葬了。我是一個活著的死人。', type: 'final' }
         ]
@@ -155,7 +160,7 @@ export const storyData = {
               { speaker: 'Kallpa', text: '你的位置就是在這指揮我們，是嗎？' },
               { speaker: 'Pacha', text: '我的位置，就是在你偷懶去追逐羊駝（Alpaca）的時候，把你的工作也做完。快點，日落前我們必須完成，Ayni（互惠）可不是嘴上說說。', action: '笑著，用他沾滿泥土的手弄亂了我的頭髮' },
               { speaker: '旁白', text: '傍晚，Kuraka（村莊領袖）來了。' },
-              { speaker: 'Kuraka', text: 'Pacha。你已經成年，身體強壯。輪到你了。薩帕·印加（Sapa Inca）——偉大的瓦伊納·卡帕克（Huayna Capac）——正在北方（基多）修建新的宮殿。你的Mit\'a（國家勞役）就是去那裡。' },
+              { speaker: 'Kuraka', text: 'Pacha。你已經成年，身體強壯。輪到你了。薩帕·印加（Sapa Inca）——偉大的瓦伊納·卡帕克（Huayna Capac）——正在北方（基多）修建 neuen 宮殿。你的Mit\'a（國家勞役）就是去那裡。' },
               { speaker: 'Kallpa', text: '我的心沉了一下。基多？那太遠了。', type: 'thought' },
               { speaker: 'Kallpa', text: 'Pacha……' },
               { speaker: 'Pacha', text: '嘿，Kallpa。這是榮耀。我們為太陽之子工作，他才能命令太陽（Inti）升起，賜予我們馬鈴薯。這就是宇宙的法則。', action: '用力地摟住我的肩膀' },
@@ -174,20 +179,45 @@ export const storyData = {
             dialogue: [
               { speaker: 'Kallpa', text: 'Pacha離開後的第二個收穫季，「痘病」（天花）降臨了。這不是我們認識的任何疾病。它從北方傳來，就是Pacha去的那個方向。我的小妹妹只發了三天燒，就走了。', type: 'thought' },
               { speaker: '旁白', text: '接著，最可怕的消息沿著路網傳來：偉大的薩帕·印加，瓦伊納·卡帕克，也死於這種怪病。' },
-              { speaker: 'Kallpa', text: '太陽之子……死了？神……怎麼會生病？如果他連自己的身體都保護不了，他如何掌控太陽？Pacha的犧牲，又是為了什麼？這是我第一次對宇宙的法則產生了懷疑。', type: 'thought' },
-              { speaker: 'Kallpa', text: '世界徹底失控了。皇帝的兩個兒子——庫斯科的瓦斯卡爾（Huáscar）和基多的阿塔瓦爾帕（Atahualpa）——都宣稱自己是新的太陽之子。內戰爆發了。', type: 'thought' },
-              { speaker: 'Kallpa', text: '我們的Ayllu宣布效忠瓦斯卡爾。', type: 'thought' },
-              { speaker: '旁白', text: '一個逃回來的信使帶來了Pacha的消息：Pacha和他的Mit\'a隊伍在北方被阿塔瓦爾帕的軍隊攔截，並被強行編入了阿塔瓦爾帕的軍隊。' },
-              { speaker: 'Kallpa', text: '我感覺一陣暈眩。Pacha……在敵人的軍隊裡。Pacha教我如何堆砌石頭。現在，我堆砌的每一塊石頭，都是為了阻止Pacha，甚至……殺死Pacha。Ayni崩潰了。互惠變成了自相殘殺。帝國？太陽的法則？這一切……都是個殘酷的謊言嗎？', type: 'thought' }
+              { speaker: 'Kallpa', text: '太陽之子……死了？神……怎麼會生病？如果他連自己的身體都保護不了，他如何掌控太陽？Pacha的犧牲，又是為了什麼？這是我第一次對宇宙的法則產生了懷疑。', type: 'thought' }
             ]
           },
           {
-            location: '阿塔瓦爾帕的處決',
+            location: 'Ayllu（村社）邊境的山谷',
             dialogue: [
-              { speaker: 'Kallpa', text: '阿塔瓦爾帕（Pacha所在的一方）贏了。但接著，傳來了最瘋狂的消息：新的太陽之子，在卡哈馬卡（Cajamarca），被一百多個「長著鬍子、皮膚是金屬」的怪人俘虜了。', type: 'thought' },
-              { speaker: '旁白', text: '幾個月後，最終的審判到來了。Kuraka召集了所有人，他的聲音顫抖著：' },
-              { speaker: 'Kuraka', text: 'Viracochas（西班牙人）……他們……他們處決了阿塔瓦爾帕。他們用繩子勒死了他。像對待一個盜賊一樣。' },
-              { speaker: 'Kallpa', text: '寂靜。神，被凡人殺死了。Pacha為之戰鬥（並可能已經死去）的「神」，被一百多個外來者隨意地處決了。而太陽……第二天依然升起。一切都是假的。Pacha的犧牲毫無意義。我的信仰，我所知道的世界，在那一刻，徹底死亡了。', type: 'thought' }
+              { speaker: 'Kallpa', text: '世界徹底失控了。皇帝的兩個兒子——瓦斯卡爾和阿塔瓦爾帕——都宣稱自己是新的太陽之子。內戰爆發了。', type: 'thought' },
+              { speaker: 'Kuraka', text: '我們的 Ayllu 效忠庫斯科的瓦斯卡爾！守住山口！阿塔瓦爾帕的北方軍隊正在靠近！' },
+              { speaker: '旁白', text: '我在恐懼中握緊了投石索。當那支軍隊出現時，我看到了他們。他們穿著北方的軍裝。走在最前面的那個斥候...' },
+              { speaker: 'Kallpa', text: 'Pacha...?', emotion: '難以置信' },
+              { speaker: '旁白', text: '他看起來更黑、更精瘦，眼神冰冷。他看到了我，舉起了長矛。' },
+              { speaker: 'Pacha', text: '滾開，Kallpa。你可以選擇現在立刻離開或者死。太陽在基多（阿塔瓦爾帕的陣營）。' },
+              { speaker: 'Kallpa', text: 'Pacha！是我！你教我如何堆砌石頭！Ayni...', emotion: '顫抖' },
+              { speaker: 'Pacha', text: 'Ayni 已經死了。現在只有戰爭。', action: '他沒有猶豫，長矛指向了我們的 Kuraka。' },
+              { speaker: 'Kallpa', text: '那一刻，我感覺Pachamama（大地母親）在我腳下裂開了。Pacha 教會我的一切...被他親手打碎了。帝國？太陽的法則？這一切都是個殘酷的謊言。', type: 'thought' }
+            ]
+          },
+          {
+            location: '卡哈馬卡（Cajamarca）的陰影',
+            dialogue: [
+              { speaker: 'Kallpa', text: '阿塔瓦爾帕（Pacha所在的一方）贏了。但勝利的消息剛到，更瘋狂的傳言就緊隨其後：新的太陽之子，在卡哈馬卡，被一百多個「長著鬍子、皮膚是金屬」的怪人俘虜了。', type: 'thought' },
+              { speaker: 'Kallpa', text: '俘虜了？神...怎麼會被俘虜？', type: 'thought' }
+            ]
+          },
+          {
+            location: 'Ayllu（村社）的集會',
+            dialogue: [
+              { speaker: '旁白', text: '幾個月過去了。整個帝國都在瘋狂地收集黃金和白銀。' },
+              { speaker: 'Kuraka', text: '聽著！Viracochas（西班牙人）答應了！只要我們用黃金填滿一個房間，用白銀填滿兩個房間，他們就釋放薩帕·印加！', emotion: '聲音顫抖但抱有希望' },
+              { speaker: 'Kallpa', text: '我們交出了神殿的飾品，融化了祖先的面具。我們的人民日夜不停地搬運財寶去卡哈馬卡。這是一種...贖金。我們在...贖回我們的神。Pacha，你到底在哪裡...', type: 'thought' }
+            ]
+          },
+          {
+            location: '最終的審判',
+            dialogue: [
+              { speaker: '旁白', text: '贖金...幾乎付清了。今天，Kuraka 再次召集了所有人。他的臉色如死灰一般。' },
+              { speaker: 'Kuraka', text: '他們...他們撒謊了。', emotion: '徹底崩潰' },
+              { speaker: 'Kuraka', text: 'Viracochas（西班牙人）……他們拿走了黃金……然後……他們處決了阿塔瓦爾帕。他們用繩子勒死了他。像對待一個盜賊一樣。' },
+              { speaker: 'Kallpa', text: '寂靜。神，被贖回，然後被殺死。被凡人殺死了。Pacha為之戰鬥的「神」，被一百多個外來者隨意地處決了。而太陽……第二天依然升起。一切都是假的。Pacha的犧牲毫無意義。我的信仰，我所知道的世界，在那一刻，徹底死亡了。', type: 'thought' }
             ]
           }
         ]
@@ -272,7 +302,7 @@ export const storyData = {
               { speaker: 'Guani', text: '我憎恨他。我憎恨這個孽種。他是我的恥辱。我給他取名叫Mateo，那是西班牙人強加的名字。我所有的仁慈，我所有的愛，都只給了Anani。Anani是我的過去，我的希望。Mateo是我的創傷，是必須被淨化的污點。', type: 'thought' },
               { speaker: 'Guani', text: '疾病大流行。我的Anani……我純潔的、真正的兒子……開始發高燒。', type: 'thought' },
               { speaker: 'Guani', text: 'Atabey！救救他！求求你！', emotion: '抱著Anani' },
-              { speaker: 'Guani', text: '我瘋狂地祈禱。但Anani的病情迅速惡化。與此同時，那個我憎恨的、幾乎沒有照料的混血兒Mateo竟在高燒後奇蹟般康復……而我的 Anani，我日夜呵護的兒子，卻被死神帶走。Atabey 的意志，我再也無法理解。', type: 'thought' },
+              { speaker: 'Guani', text: '我瘋狂地祈禱。但Anani的病情迅速惡化。與此同時，那個我憎恨的、幾乎沒有照料的混血兒Mateo竟在高燒後奇蹟般康復……而我的 Anani，我日夜呵護的兒子，卻即將被死神帶走。Atabey 的意志，我再也無法理解。', type: 'thought' },
               { speaker: 'Guani', text: 'Atabey……你為什麼救了那個孽種，卻不救我的Anani？', type: 'thought' }
             ]
           }
@@ -316,7 +346,7 @@ export const storyData = {
           { speaker: 'Arima', text: '那Mateo呢？' },
           { speaker: 'Guani', text: '……他是這片詛咒之地的產物。讓他留下。我們走！', action: '看了一眼那個混血兒' },
           { speaker: 'Guani', text: '我們在海上漂流。Anani的病情時好時壞。我們最終登陸在一片未知的海岸——這裡是加勒比人（Carib）的領地，我曾經最害怕的敵人。但他們沒有攻擊我們。他們和我們一樣，臉上帶著病容和恐懼。', type: 'thought' },
-          { speaker: 'Guani', text: '我低頭看著Anani。他不僅在發燒，身上也開始出現了……膿皰。我終於明白。疾病跟著我們來了。我試圖發揚光大的『神聖技藝』，卻伴隨著我無法擺脫的『詛咒』，一同抵達了這個新世界。Atabey，你根本沒有拋棄我們。你只是在用一種我們無法理解的方式，來平衡這個世界...', type: 'final' }
+          { speaker: 'Guani', text: '我低頭看著Anani。他不僅在發燒，身上也開始出現了……膿皰。我終於明白。疾病跟著我們來了。我試圖發揚光大的『神聖技藝』，卻伴隨著我無法擺脫的『詛詛』，一同抵達了這個新世界。Atabey，你根本沒有拋棄我們。你只是在用一種我們無法理解的方式，來平衡這個世界...', type: 'final' }
         ]
       }
     ]
@@ -356,15 +386,31 @@ export const storyData = {
         ]
       },
       {
-        title: '第二幕：世界劇變 (e1543-1562)',
-        scenes: []
+        title: '第二幕：市場的重置 (c. 1543)',
+        scenes: [
+          {
+            location: '坎佩切（Campeche）的貿易站',
+            dialogue: [
+              { speaker: "B'alam", text: "我躲在我的倉庫裡，空氣中滿是可可豆的香氣和恐懼的酸臭味。市場已經癱瘓了三天。Dzules（外來者）和他們的Xiu盟友正在橫掃西部。", "type": "thought" },
+              { speaker: "受傷的商人", text: "B'alam！快跑！他們在Sotuta（索圖塔）殺人！Cocom領主正在集結所有人...這是一場聖戰！", "action": "闖進來，一隻眼睛受了傷" },
+              { speaker: "B'alam", text: "『聖戰』？", "emotion": "冷靜地" },
+              { speaker: "受傷的商人", text: "你不懂嗎？這是末日！" },
+              { speaker: "B'alam", text: "我懂。我懂『成本』。你說的『聖戰』，成本太高了。你流的血，就是Cocom的『虧損』。那你呢？", "action": "轉向另一位躲在角落的商人" },
+              { speaker: "馬尼來的商人", text: "我...我聽說...Xiu家族活得很好。Dzules...西班牙人...他們帶來了一個新的神。他們在馬尼建了石頭房子...他們需要...補給...", "emotion": "顫抖" },
+              { speaker: "B'alam", text: "補給...", "type": "thought" },
+              { speaker: "旁白", "text": "我讓他們都離開了。我關上門，點燃了一支蜂蠟燭。我看著燭光。末日？不。聖戰？不。這是一場『資產重組』。" },
+              { speaker: "B'alam", text: "資產清算開始。選項一：投資Cocom。高風險，本土市場，但正在虧損。選項二：投資Xiu-西班牙聯盟。高回報，壟斷潛力，但要成為走狗。選項三：還有那些穿長袍的人（修士）。他們不要可可，他們要『知識』和『靈魂』。這是最奇怪的商品，但可能是最長期的生意。", "type": "thought" },
+              { speaker: "B'alam", text: "Ek' Chuah（商人之神）教導我，別做虧本生意。現在，是時候下注了。", "type": "thought" }
+            ]
+          }
+        ]
       }
     ],
     choices: [
       {
         id: 1,
         title: '抉擇一：利用世仇（投資勝利者 - Xiu/西班牙 聯盟）',
-        actTitle: '第二幕：聯盟與背叛 (c. 1543-1562)',
+        actTitle: '第三幕：聯盟與背叛 (c. 1543-1562)',
         content: [
           { speaker: "B'alam", text: '這是一筆很簡單的帳。資產負債表：Cocom家族有「驕傲」和「傳統」。Xiu家族有「地盤」和「怨恨」。而Dzules（西班牙人）有鋼鐵、馬匹和火炮。這不是一場公平的戰爭，這是一場收購。Cocom家族註定要破產。', type: 'thought' },
           { speaker: "B'alam", text: 'Xiu家族雖然愚蠢地相信他們能控制西班牙人，但他們是即將獲勝的團隊。我的策略：我將前往馬尼，向Tutul Xiu（Xiu領主）和蒙特霍（Montejo）獻上我的忠誠——以及我最有價值的資產：我的路線圖。我會告訴他們Cocom家族所有的秘密補給路線和隱藏的水源地（Cenote）。', type: 'thought' },
@@ -378,7 +424,7 @@ export const storyData = {
       {
         id: 2,
         title: '抉擇二：叢林抵抗（投資本土市場 - Cocom 聯盟）',
-        actTitle: '第二幕：叢林抵抗 (c. 1543)',
+        actTitle: '第三幕：叢林抵抗 (c. 1543)',
         content: [
           { speaker: "B'alam", text: '這些Dzules（西班牙人）根本不懂我們的「市場」。他們是掠奪者，不是生意夥伴。他們要的不是可可豆，他們要的是黃金和奴隸。他們會摧毀整個貿易體系，包括我。我已經看他們失敗兩次了。他們的鋼鐵會生鏽，他們的馬匹會被美洲豹吃掉，他們在叢林裡會渴死。', type: 'thought' },
           { speaker: "B'alam", text: '我的策略：這是一場高風險、高回報的投資。Xiu家族為了短期的復仇，正在出賣我們所有人的未來。我將前往索圖塔，找到Nachi Cocom（Cocom領主）。他需要一個後勤總管（Quartermaster）。我的商隊網絡將成為Cocom的軍事補給線。我對水源地（Cenote）的了解，將成為困死西班牙人的武器。', type: 'thought' },
@@ -387,13 +433,13 @@ export const storyData = {
           { speaker: '旁白', text: '你的高風險投資失敗了。你驚人的後勤網絡——利用秘密小徑運送食物和武器，並切斷西班牙人的水源——讓Nachi Cocom的抵抗軍多堅持了數年。你給蒙特霍（Montejo）和Xiu叛徒造成了慘重的損失。' },
           { speaker: '旁白', text: '但你低估了兩件事：西班牙人的增援，以及Xiu家族對Cocom家族刻骨的仇恨。在一次毀滅性的圍剿中，你的主要補給基地（一個隱藏的Cenote）被Xiu家族的斥候發現。你的商隊被摧毀。你被俘虜了。' },
           { speaker: '旁白', text: '在索圖塔（Sotuta）的廣場上，你昔日的「商業夥伴」——Xiu貴族——指認了你。西班牙指揮官宣布你為「叛軍頭目與間諜」。你被公開絞死。' },
-          { speaker: "B'alam", text: '你作為一個現實主義者，一生都在避免風險和選邊站，但你最終的結局，卻是為了一場你本不相信的「聖戰」而死。你的資產被沒收，你的名字在歷史上沒有留下任何痕跡。', type: 'final' }
+          { speaker: "B'alam", text: '你作為一個現實主義者，一生都在避免風險和選邊站，但你最終的结局，卻是為了一場你本不相信的「聖戰」而死。你的資產被沒收，你的名字在歷史上沒有留下任何痕跡。', type: 'final' }
         ]
       },
       {
         id: 3,
         title: '抉擇三：宗教融合（投資新知識 - Landa 路線）',
-        actTitle: '第二幕：宗教融合 (c. 1543-1562)',
+        actTitle: '第三幕：宗教融合 (c. 1543-1562)',
         content: [
           { speaker: "B'alam", text: 'Xiu和Cocom都在打一場舊戰爭。他們都沒看清局勢。真正的力量，不在於蒙特霍（Montejo）的士兵，而在於那些穿著棕色長袍、手無寸鐵的傳教士（方濟會）。士兵會離開，但這些人是來重塑市場規則的。', type: 'thought' },
           { speaker: "B'alam", text: '舊神（Chaac, Ek\' Chuah）的「市場份額」已經崩潰了。這個新的「Dios」和他的「Cristo」正在壟斷一切。我的策略：這是一場長期投資。我不會押注在任何一個馬雅城邦上。我將押注在知識上。', type: 'thought' },
@@ -409,4 +455,3 @@ export const storyData = {
     ]
   }
 };
-
