@@ -1,4 +1,4 @@
-// 遊戲數據 - 角色列表
+// 遊戲數據 - 角色和劇情
 export const characters = [
   {
     id: 'popoca',
@@ -42,7 +42,6 @@ export const characters = [
   }
 ];
 
-// 遊戲數據 - 劇情內容
 export const storyData = {
   popoca: {
     acts: [
@@ -161,7 +160,7 @@ export const storyData = {
               { speaker: 'Kallpa', text: '你的位置就是在這指揮我們，是嗎？' },
               { speaker: 'Pacha', text: '我的位置，就是在你偷懶去追逐羊駝（Alpaca）的時候，把你的工作也做完。快點，日落前我們必須完成，Ayni（互惠）可不是嘴上說說。', action: '笑著，用他沾滿泥土的手弄亂了我的頭髮' },
               { speaker: '旁白', text: '傍晚，Kuraka（村莊領袖）來了。' },
-              { speaker: 'Kuraka', text: 'Pacha。你已經成年，身體強壯。輪到你了。薩帕·印加（Sapa Inca）——偉大的瓦伊納·卡帕克（Huayna Capac）——正在北方（基多）修建 neuen 宮殿。你的Mit\'a（國家勞役）就是去那裡。' },
+              { speaker: 'Kuraka', text: 'Pacha。你已經成年，身體強壯。輪到你了。薩帕·印加（Sapa Inca）——偉大的瓦伊納·卡帕克（Huayna Capac）——正在北方（基多）修建新的宮殿。你的Mit\'a（國家勞役）就是去那裡。' },
               { speaker: 'Kallpa', text: '我的心沉了一下。基多？那太遠了。', type: 'thought' },
               { speaker: 'Kallpa', text: 'Pacha……' },
               { speaker: 'Pacha', text: '嘿，Kallpa。這是榮耀。我們為太陽之子工作，他才能命令太陽（Inti）升起，賜予我們馬鈴薯。這就是宇宙的法則。', action: '用力地摟住我的肩膀' },
@@ -304,7 +303,7 @@ export const storyData = {
               { speaker: 'Guani', text: '疾病大流行。我的Anani……我純潔的、真正的兒子……開始發高燒。', type: 'thought' },
               { speaker: 'Guani', text: 'Atabey！救救他！求求你！', emotion: '抱著Anani' },
               { speaker: 'Guani', text: '我瘋狂地祈禱。但Anani的病情迅速惡化。與此同時，那個我憎恨的、幾乎沒有照料的混血兒Mateo竟在高燒後奇蹟般康復……而我的 Anani，我日夜呵護的兒子，卻變得氣若游絲。Atabey 的意志，我再也無法理解。', type: 'thought' },
-              { speaker: 'Guani', text: 'Atabey……你為什麼救了那個孽種？我的Anani……他的呼吸越來越弱了……', type: 'thought' }
+              { speaker: 'Guani', text: 'Atabey……你為什麼救了那個孽種，卻不救我的Anani？', type: 'thought' }
             ]
           }
         ]
@@ -347,7 +346,7 @@ export const storyData = {
           { speaker: 'Arima', text: '那Mateo呢？' },
           { speaker: 'Guani', text: '……他是這片詛咒之地的產物。讓他留下。我們走！', action: '看了一眼那個混血兒' },
           { speaker: 'Guani', text: '我們在海上漂流。Anani的病情時好時壞。我們最終登陸在一片未知的海岸——這裡是加勒比人（Carib）的領地，我曾經最害怕的敵人。但他們沒有攻擊我們。他們和我們一樣，臉上帶著病容和恐懼。', type: 'thought' },
-          { speaker: 'Guani', text: '我低頭看著Anani。他不僅在發燒，身上也開始出現了……膿皰。我終於明白。疾病跟著我們來了。我試圖發揚光大的『神聖技藝』，卻伴隨著我無法擺脫的『詛詛』，一同抵達了這個新世界。Atabey，你根本沒有拋棄我們。你只是在用一種我們無法理解的方式，來平衡這個世界...', type: 'final' }
+          { speaker: 'Guani', text: '我低頭看著Anani。他不僅在發燒，身上也開始出現了……膿皰。我終於明白。疾病跟著我們來了。我試圖發揚光大的『神聖技藝』，卻伴隨著我無法擺脫的『詛咒』，一同抵達了這個新世界。Atabey，你根本沒有拋棄我們。你只是在用一種我們無法理解的方式，來平衡這個世界...', type: 'final' }
         ]
       }
     ]
