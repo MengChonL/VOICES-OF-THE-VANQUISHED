@@ -302,7 +302,7 @@ export const storyData = {
               { speaker: 'Guani', text: '我憎恨他。我憎恨這個孽種。他是我的恥辱。我給他取名叫Mateo，那是西班牙人強加的名字。我所有的仁慈，我所有的愛，都只給了Anani。Anani是我的過去，我的希望。Mateo是我的創傷，是必須被淨化的污點。', type: 'thought' },
               { speaker: 'Guani', text: '疾病大流行。我的Anani……我純潔的、真正的兒子……開始發高燒。', type: 'thought' },
               { speaker: 'Guani', text: 'Atabey！救救他！求求你！', emotion: '抱著Anani' },
-              { speaker: 'Guani', text: '我瘋狂地祈禱。但Anani的病情迅速惡化。與此同時，那個我憎恨的、幾乎沒有照料的混血兒Mateo竟在高燒後奇蹟般康復……而我的 Anani，我日夜呵護的兒子，卻即將被死神帶走。Atabey 的意志，我再也無法理解。', type: 'thought' },
+              { speaker: 'Guani', text: '我瘋狂地祈禱。但Anani的病情迅速惡化。與此同時，那個我憎恨的、幾乎沒有照料的混血兒Mateo竟在高燒後奇蹟般康復……而我的 Anani，我日夜呵護的兒子，卻即將被病魔折磨。Atabey 的意志，我再也無法理解。', type: 'thought' },
               { speaker: 'Guani', text: 'Atabey……你為什麼救了那個孽種，卻不救我的Anani？', type: 'thought' }
             ]
           }
