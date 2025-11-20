@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
-import { characters, storyData } from './gameData';
+import { characters, storyData } from './data';
 import StartScreen from './components/StartScreen';
 import CharacterSelect from './components/CharacterSelect';
 import StoryGame from './components/StoryGame';
