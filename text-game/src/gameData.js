@@ -1,49 +1,6 @@
-// 遊戲數據 - 角色和劇情
-export const characters = [
-  {
-    id: 'popoca',
-    name: '波波卡 (Popoca)',
-    title: '阿茲特克羽毛工匠',
-    location: '特諾奇提特蘭 (Tenochtitlan)',
-    period: 'c. 1519-1521',
-    description: '你是備受尊敬的羽毛工匠（Amanteca），為皇帝蒙特祖馬和最精銳的戰士製作華麗的儀式披風。你的雙手被賦予了神聖的使命，你的技藝是世襲的。你相信階級是神所制定的，你對這門古老技藝充滿驕傲。',
-    image: '🪶',
-    color: '#8B4513'
-  },
-  {
-    id: 'kallpa',
-    name: 'Kallpa (卡爾帕)',
-    title: '安第斯山區村民',
-    location: '安第斯山脈',
-    period: 'c. 1526-1533',
-    description: '你是生活在世界屋脊的年輕牧民，照看著家族的駱馬和羊駝。你的生活由血緣親屬和神聖的互惠原則（Ayni）維繫著。你最親近的人是表哥Pacha，他是你心中的榜樣。你相信腳下的大地（Pachamama）和護佑村莊的雪山之靈（Apu）。',
-    image: '🦙',
-    color: '#CD853F'
-  },
-  {
-    id: 'guani',
-    name: 'Guani (瓜妮)',
-    title: '泰諾農藝師 / 陶藝師',
-    location: 'Quisqueya（伊斯帕尼奧拉島）',
-    period: 'c. 1492-1508',
-    description: '你是食物的創造者，木薯（Yuca）處理的大師。你深知這種植物的秘密——它的根莖生吃是致命劇毒，但經過你的雙手就變成了養活全村的主食。作為酋長的妹妹，你在母系社會中地位崇高。你堅定地信仰Atabey。',
-    image: '🌿',
-    color: '#2E8B57'
-  },
-  {
-    id: 'balam',
-    name: "B'alam (巴拉姆)",
-    title: '馬雅可可商人',
-    location: '猶加敦半島',
-    period: 'c. 1542-1562',
-    description: '你是受人尊敬的馬雅商人（P\'polom），經營可可豆、蜂蜜和蠟燭。猶加敦半島分裂成16個城邦，但對你而言這是16個市場。你是現實主義者，真正的信仰是"利潤"。你深知要打開市場，必須表現得比祭司更虔誠。',
-    image: '🍫',
-    color: '#654321'
-  }
-];
-
 export const storyData = {
   popoca: {
+    // Popoca 的劇情邏輯基本通順（第二幕明確說兒子走了，後續抉擇都是基於兒子已死），此處保持不變或微調語氣
     acts: [
       {
         title: '第一幕：世界如常 (c. 1519)',
@@ -136,7 +93,7 @@ export const storyData = {
           { speaker: '旁白', text: '他停在了我面前。我正在用一塊碎石，無意識地在泥地上劃出一隻格查爾鳥的輪廓。這是我僅存的習慣。' },
           { speaker: '修士', text: '...你。你的手。', emotion: '生硬的納瓦特爾語' },
           { speaker: '旁白', text: '他蹲下來，看著那隻鳥的圖案。他的手指觸碰了我的手腕——那雙曾為皇帝服務、如今佈滿瘡疤和污垢的手。' },
-          { speaker: '修士', text: '你造過神像？' },
+          { speaker: '修士', text: '你曾描繪過那些偶像（Idols）？' },
           { speaker: '波波卡', text: '...', action: '我點了點頭。' },
           { speaker: '修士', text: '很好。你的手藝不屬於魔鬼。它屬於 Dios（上帝）。你將為一個新的神服務。一個真正的神。', action: '他拉起了我。' },
           { speaker: '旁白', text: '我活了下來。我現在坐在一個冰冷的石頭房間裡。這是一座新蓋的『教堂』。我的手，那雙曾為阿茲特克皇帝服務的手，正在製作一件新的披風。不是為戰神，而是為他們釘在木架上的那個『神之子』的母親（聖母瑪利亞）。他們稱讚我的技藝，說這是『上帝的禮物』。我只是點頭。' },
@@ -302,8 +259,9 @@ export const storyData = {
               { speaker: 'Guani', text: '我憎恨他。我憎恨這個孽種。他是我的恥辱。我給他取名叫Mateo，那是西班牙人強加的名字。我所有的仁慈，我所有的愛，都只給了Anani。Anani是我的過去，我的希望。Mateo是我的創傷，是必須被淨化的污點。', type: 'thought' },
               { speaker: 'Guani', text: '疾病大流行。我的Anani……我純潔的、真正的兒子……開始發高燒。', type: 'thought' },
               { speaker: 'Guani', text: 'Atabey！救救他！求求你！', emotion: '抱著Anani' },
-              { speaker: 'Guani', text: '我瘋狂地祈禱。但Anani的病情迅速惡化。與此同時，那個我憎恨的、幾乎沒有照料的混血兒Mateo竟在高燒後奇蹟般康復……而我的 Anani，我日夜呵護的兒子，卻即將被病魔折磨。Atabey 的意志，我再也無法理解。', type: 'thought' },
-              { speaker: 'Guani', text: 'Atabey……你為什麼救了那個孽種，卻不救我的Anani？', type: 'thought' }
+              { speaker: 'Guani', text: '我瘋狂地祈禱。但Anani的病情迅速惡化。與此同時，那個我憎恨的、幾乎沒有照料的混血兒Mateo竟在高燒後奇蹟般康復……而我的 Anani，我日夜呵護的兒子，卻變得氣若游絲。Atabey 的意志，我再也無法理解。', type: 'thought' },
+              // [修復點]: 這裡修正了文本，表示Anani是「正在死去」而不是「已經死了」，讓後續選擇更合邏輯。
+              { speaker: 'Guani', text: 'Atabey……你為什麼救了那個孽種？我的Anani……他的呼吸越來越弱了……', type: 'thought' }
             ]
           }
         ]
@@ -315,11 +273,11 @@ export const storyData = {
         title: '抉擇一：逃往深山（破碎的信仰）',
         actTitle: '第三幕：崩潰與選擇 (1508-1510)',
         content: [
-          { speaker: 'Guani', text: '不行！我不能讓他死！Cristianos的惡靈污染了海岸！我必須帶Anani去Bahoruco山區！', action: '看著病重的Anani' },
+          { speaker: 'Guani', text: '不行！我不能讓他死！Cristianos的惡靈污染了海岸！我必須帶Anani去Bahoruco山區！那裡的空氣是純淨的，那裡還有我們未被征服的神靈！', action: '抱起虛弱的Anani' },
           { speaker: '老婦人', text: 'Guani，那Mateo呢？' },
           { speaker: 'Guani', text: '他不是我的孩子！他是西班牙人的種！把他留給他的父親！我的仁慈，只屬於我真正的血脈！Atabey會在山上治癒Anani的！', emotion: '憎恨地看著那個混血兒' },
-          { speaker: 'Guani', text: '我帶著Anani逃進了深山，加入了其他逃亡的泰諾倖存者。我在山洞裡日夜祈禱。但Atabey始終沉默。在山區寒冷的空氣中，Anani的呼吸停止了。', type: 'thought' },
-          { speaker: 'Guani', text: '我的神死了。我看著周圍，我們帶來的倖存族人，也在一個接一個地死於他們從定居點帶來的傳染病。我逃離了西班牙人，卻沒能逃離他們的疾病。', type: 'final' }
+          { speaker: 'Guani', text: '我帶著Anani逃進了深山，加入了其他逃亡的泰諾倖存者。我在山洞裡日夜祈禱。但Atabey始終沉默。在山區寒冷的空氣中，Anani的呼吸最終還是停止了。', type: 'thought' },
+          { speaker: 'Guani', text: '我的神死了。我看著周圍，我們帶來的倖存族人，也在一個接一個地死於他們從定居點帶來的傳染病。我逃離了西班牙人，卻沒能逃離他們的疾病。我的選擇……是徒勞的。', type: 'final' }
         ]
       },
       {
@@ -327,7 +285,8 @@ export const storyData = {
         title: '抉擇二：同化（矛盾的母愛）',
         actTitle: '第三幕：崩潰與選擇 (1508-1510)',
         content: [
-          { speaker: 'Guani', text: '我的Anani……死了。我用盡了所有草藥，向Atabey獻出了我最後的眼淚。她沒有救他。我的神死了。', type: 'thought' },
+          // [修復點]: 這裡開頭明確交代Anani已死，作為選擇同化的契機
+          { speaker: 'Guani', text: '儘管我徹夜祈禱，Anani還是在黎明前停止了呼吸。我用盡了所有草藥，向Atabey獻出了我最後的眼淚。她沒有救他。我的神死了。', type: 'thought' },
           { speaker: 'Guani', text: '而那個孩子……那個我憎恨的孩子，Mateo……他活了下來。我憎恨他。我憎恨他身上的血，那血殺死了我的兄弟，殺死了我的Anani。', type: 'thought' },
           { speaker: 'Guani', text: '但……當我昨晚看著他時，他握住了我的手指。他有我的眼睛。……他是我的孩子。我最後的孩子。', emotion: '哭泣' },
           { speaker: 'Guani', text: '我的信仰崩潰了。取而代之的是一種扭曲、痛苦的現實主義。', type: 'thought' },
@@ -340,7 +299,7 @@ export const storyData = {
         title: '抉擇三：航向未知（被詛咒的技藝）',
         actTitle: '第三幕：崩潰與選擇 (1508-1510)',
         content: [
-          { speaker: 'Guani', text: '不行！Atabey已經拋棄了這座島！我們必須離開！', emotion: '抱著瀕死的Anani' },
+          { speaker: 'Guani', text: '不行！Atabey已經拋棄了這座島！我們必須離開！Anani還有救，只要離開這片被詛咒的土地！', emotion: '抱著奄奄一息的Anani' },
           { speaker: '兄弟Arima', text: 'Guani，我藏了一艘船。你的技藝是神聖的。製作Casabe的能力，是Atabey賜予我們的。我們必須把這份技藝帶到新的土地上發揚光大！' },
           { speaker: 'Guani', text: '帶上Anani！快！' },
           { speaker: 'Arima', text: '那Mateo呢？' },
@@ -444,6 +403,8 @@ export const storyData = {
           { speaker: "B'alam", text: 'Xiu和Cocom都在打一場舊戰爭。他們都沒看清局勢。真正的力量，不在於蒙特霍（Montejo）的士兵，而在於那些穿著棕色長袍、手無寸鐵的傳教士（方濟會）。士兵會離開，但這些人是來重塑市場規則的。', type: 'thought' },
           { speaker: "B'alam", text: '舊神（Chaac, Ek\' Chuah）的「市場份額」已經崩潰了。這個新的「Dios」和他的「Cristo」正在壟斷一切。我的策略：這是一場長期投資。我不會押注在任何一個馬雅城邦上。我將押注在知識上。', type: 'thought' },
           { speaker: "B'alam", text: '我將主動接近那個叫迪亞哥·德·蘭達（Diego de Landa）的修士。他似乎對我們的「舊習俗」充滿了好奇。我將成為他的首席線人和文化翻譯。我將用我所知道的舊神話、預言和儀式，來交換我在這個新信仰體系中的地位。我的回報：我將成為教會的「中間人」，一個不可或缺的「文化掮客」。', type: 'thought' },
+          // [修復點]: 增加了與蘭達修士的互動場景，使皈依過程更具體
+          { speaker: '旁白', text: '我帶著精心準備的禮物——不是金子，而是關於馬雅曆法秘密的知識——跪在了蘭達修士面前。' },
           { speaker: "B'alam", text: '聖父！我一生都在黑暗中行走，崇拜著Ek\' Chuah這樣的假神，追逐著可可豆的虛幻財富。但您的話語，就像一道光，照亮了我！我明白了！古老的預言...它們不是在說末日，它們是在預言您的到來！是在預言真理的降臨！我過去是個罪人，聖父。但我想贖罪。我了解那些舊神的所有秘密，所有儀式，所有隱藏的偶像（idols)。請讓您...將這些魔鬼的根源，從我的同胞心中徹底挖出來，帶領他們走向您唯一的光！', action: '跪下，眼中充滿『頓悟』的淚水', emotion: '顫抖、虔誠地' },
           { speaker: '旁白', text: '你的長期投資...迎來了最大的成功。在接下來的幾年裡，你成了迪亞哥·德·蘭達（Diego de Landa）最信任的「文化掮客」。你幫助他記錄馬雅曆法（同時也向他匯報哪些祭司仍在秘密活動）。你揭發了數十個隱藏的Chaac 雨神石雕（偶像），你的「虔誠」讓你成為了教會在馬尼（Maní）的重要人物。你太成功了。' },
           { speaker: '旁白', text: '1562年，蘭達修士聽聞有馬雅貴族（甚至是你曾經的盟友Xiu家族）在「回歸」舊神。他陷入了偏執的狂怒。他認為這一切都是一場巨大的陰謀。而你，B\'alam，這個最了解舊神、又最快接受新神的「完美皈依者」，顯然就是幕後的魔鬼。你被捕了。' },
@@ -455,4 +416,3 @@ export const storyData = {
     ]
   }
 };
-
