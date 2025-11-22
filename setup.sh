@@ -8,7 +8,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$SCRIPT_DIR"
 
 echo "=================================="
-echo "  GESB2008 項目依賴安裝腳本"
+echo "  GEGA2007 項目依賴安裝腳本"
 echo "=================================="
 echo ""
 echo "工作目錄: $SCRIPT_DIR"
