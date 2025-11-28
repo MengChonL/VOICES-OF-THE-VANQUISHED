@@ -193,7 +193,7 @@ export const storyData = {
               { speaker: 'Pacha', text: '滾開，Kallpa。你可以選擇現在立刻離開或者死。太陽在基多（阿塔瓦爾帕的陣營）。' },
               { speaker: 'Kallpa', text: 'Pacha！是我！你教我如何堆砌石頭！Ayni...', emotion: '顫抖' },
               { speaker: 'Pacha', text: 'Ayni 已經死了。現在只有戰爭。', action: '他沒有猶豫，長矛指向了我們的 Kuraka。' },
-              { speaker: 'Kallpa', text: '那一刻，我感覺Pachamama（大地母親）在我腳下裂開了。Pacha 教會我的一切...被他親手打碎了。帝國？太陽的法則？這一切都是個殘酷的謊言。', type: 'thought' }
+              { speaker: 'Kallpa', text: '那一刻，我感覺Pachamama（大地母親）在我腳下裂開了。Pacha 教會我的一切...被他親手打碎了。帝國？太陽的法則？這一切都是個殘酷的謊言。在那場戰爭我效忠庫斯科陣營節節敗退，我在混亂之中乘機逃脫了，僥幸的活下來了。我回到了戰場，地上有許多的屍體我尋找了許久但找不到Pacha的屍體…', type: 'thought' }
             ]
           },
           {
